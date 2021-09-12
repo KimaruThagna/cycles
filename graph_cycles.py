@@ -7,6 +7,12 @@ After testing with several sample graphs, the networkX example is reatively fast
 the native implementation. The native implementation uses recurssion and this slows it down
 Since the loop breaks upon the detection of a cycle, the best case scenario is if the cycle occurs
 at the beginning of the graph dictionary.
+
+In the event the graph is very large and a cycle exists at the very beginning, the native implementation would be faster since the loops breaks as soon as there is a cycle detected
+
+The networkx implementation returns all cycles found meaning it traverses the whole graph. A better alternative if one wants to know what the cycles are.
+
+
 '''
 # networkx Implementation
 
